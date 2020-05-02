@@ -108,7 +108,7 @@ img {
     flex-basis: 100%;
     text-align: center;
     margin-bottom: 20px;
-    color: #333333;
+    color: #333;
     font: var(--setion-title-first-row-font);
 }
 
@@ -118,7 +118,7 @@ img {
 
 .section-title-second-row {
     text-transform: uppercase;
-    color: #333333;
+    color: #333;
     font: var(--setion-title-second-row-font);
 }
 
@@ -138,9 +138,58 @@ img {
 
 .amazing-services-list-item {
     width: 382px;
+    padding-left: 82px;
 }
 
 .amazing-services-list-item:nth-child(-n+3) {
     margin-top: 64px;
     margin-bottom: 100px;
+}
+
+.amazing-services-list-item-title {
+    font: var(--nav-main-subtitles-footer-font);
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.amazing-services-list-item-text {
+    font: 400 15px/24px "Roboto", sans-serif;
+    color: #999;
+}
+
+.bg-alarm {
+    background: url("../img/icons/alarm.png") 20px 0 no-repeat;
+}
+
+.bg-line-graph {
+    background: url("../img/icons/line-graph.png") 20px 0 no-repeat;
+}
+
+.bg-computer {
+    background: url("../img/icons/computer-ok.png") 20px 0 no-repeat;
+}
+
+.bg-book {
+    background: url("../img/icons/book2.png") 20px 0 no-repeat;
+}
+
+.bg-home {
+    background: url("../img/icons/home.png") 20px 0 no-repeat;
+}
+
+.bg-image {
+    background: url("../img/icons/image.png") 20px 0 no-repeat;
+}
+
+.meet-our-team {
+    padding-top: 100px;
+}
+
+.short-description-our-team {
+    font: 400 15px/24px "Roboto", sans-serif;
+    color: #999;
+    text-align: center;
+    max-width: 1000px;
+    margin: 44px auto 0;
 }
