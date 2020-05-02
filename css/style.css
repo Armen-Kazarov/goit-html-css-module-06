@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+    --nav-main-subtitles-footer-font: 400 14px/1.2 "Montserrat", sans-serif;
+    --setion-title-first-row-font: 400 24px/1.2 "Kaushan Script", sans-serif;
+    --setion-title-second-row-font: 700 30px/1.2 "Montserrat", sans-serif;;
+}
+
+.header-nav-menu {
+    min-height: 64px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.header-nav-menu {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font: 700 30px/1.2 "Montserrat", sans-serif;
+    color: #95e1d3;
+}
+
+.header-nav-menu-list-item + .header-nav-menu-list-item {
+    margin-left: 58px;
+}
+
+.header-nav-menu-link {
+    font: var(--nav-main-subtitles-footer-font);
+    color: #95e1d3;
+    display: block;
+    position: relative;
+    transition-property: color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+.header-nav-menu-link::after {
+    content: '';
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #f38181;
+    margin-bottom: -10px;
+    transition-property:
+            visibility,
+            opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+.header-nav-menu-link:hover {
+    color: #f38181;
+    transition-property: color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+.header-nav-menu-link:hover::after {
+    transition-property:
+            visibility,
+            opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    visibility: visible;
+    opacity: 1;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.amazing-services {
+    padding-top: 88px;
+}
+
+.section-title {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section-title-first-row {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+    font: var(--setion-title-first-row-font);
+}
+
+.section-title-first-row:first-letter {
+    text-transform: uppercase;
+}
+
+.section-title-second-row {
+    text-transform: uppercase;
+    color: #333333;
+    font: var(--setion-title-second-row-font);
+}
+
+.section-title-second-row::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: 40px auto 0;
+}
+
+.amazing-services-list-items {
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.amazing-services-list-item {
+    width: 382px;
+}
+
+.amazing-services-list-item:nth-child(-n+3) {
+    margin-top: 64px;
+    margin-bottom: 100px;
+}
