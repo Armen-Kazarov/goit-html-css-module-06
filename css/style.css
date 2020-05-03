@@ -9,13 +9,17 @@ a {
 img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 :root {
     --nav-main-subtitles-footer-font: 400 14px/1.2 "Montserrat", sans-serif;
     --setion-title-first-row-font: 400 24px/1.2 "Kaushan Script", sans-serif;
-    --setion-title-second-row-font: 700 30px/1.2 "Montserrat", sans-serif;;
+    --setion-title-second-row-font: 700 30px/1.2 "Montserrat", sans-serif;
+    --decorationline-hovernav-color: #f38181;
+    --nav-btn-hoverphoto-color: #95e1d3;
+    --titles-subtaitles-footercopyright-color: #333;
+    --sections-text-color: #999;
 }
 
 .header-nav-menu {
@@ -38,7 +42,7 @@ img {
 
 .logo {
     font: 700 30px/1.2 "Montserrat", sans-serif;
-    color: #95e1d3;
+    color: var(--nav-btn-hoverphoto-color);
 }
 
 .header-nav-menu-list-item + .header-nav-menu-list-item {
@@ -47,7 +51,7 @@ img {
 
 .header-nav-menu-link {
     font: var(--nav-main-subtitles-footer-font);
-    color: #95e1d3;
+    color: var(--nav-btn-hoverphoto-color);
     display: block;
     position: relative;
     transition-property: color;
@@ -64,7 +68,7 @@ img {
     bottom: 0;
     height: 3px;
     width: 100%;
-    background-color: #f38181;
+    background-color: var(--decorationline-hovernav-color);
     margin-bottom: -10px;
     transition-property:
             visibility,
@@ -74,7 +78,7 @@ img {
 }
 
 .header-nav-menu-link:hover {
-    color: #f38181;
+    color: var(--decorationline-hovernav-color);
     transition-property: color;
     transition-duration: 0.2s;
     transition-timing-function: linear;
@@ -100,15 +104,14 @@ img {
 }
 
 .section-title {
-    justify-content: center;
-    flex-wrap: wrap;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--titles-subtaitles-footercopyright-color);
 }
 
 .section-title-first-row {
-    flex-basis: 100%;
-    text-align: center;
+    display: block;
     margin-bottom: 20px;
-    color: #333;
     font: var(--setion-title-first-row-font);
 }
 
@@ -118,7 +121,6 @@ img {
 
 .section-title-second-row {
     text-transform: uppercase;
-    color: #333;
     font: var(--setion-title-second-row-font);
 }
 
@@ -127,7 +129,7 @@ img {
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #f38181;
+    background-color: var(--decorationline-hovernav-color);
     margin: 40px auto 0;
 }
 
@@ -147,15 +149,22 @@ img {
 }
 
 .amazing-services-list-item-title {
+    margin-bottom: 16px;
+}
+
+.section-subtitle {
     font: var(--nav-main-subtitles-footer-font);
     text-transform: uppercase;
-    color: #333;
-    margin-bottom: 16px;
+    color: var(--titles-subtaitles-footercopyright-color);
 }
 
 .amazing-services-list-item-text {
     font: 400 15px/24px "Roboto", sans-serif;
-    color: #999;
+    color: var(--sections-text-color);
+}
+
+.amazing-services-list-item-text:first-letter {
+    text-transform: uppercase;
 }
 
 .bg-alarm {
@@ -184,12 +193,135 @@ img {
 
 .meet-our-team {
     padding-top: 100px;
+    padding-bottom: 82px;
 }
 
 .short-description-our-team {
     font: 400 15px/24px "Roboto", sans-serif;
-    color: #999;
+    color:var(--sections-text-color);
     text-align: center;
     max-width: 1000px;
-    margin: 44px auto 0;
+    margin: 44px auto 90px;
+}
+
+.short-description-our-team:first-letter {
+    text-transform: uppercase;
+}
+
+.team-cards {
+    justify-content: space-between;
+}
+
+.team-specialist-wrapper {
+    position: relative;
+}
+
+.specialist-photo {
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+.overlay {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: -moz-linear-gradient( 90deg, rgba(252, 227, 138, .9) 0%, rgba(243, 129, 129, .9) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgba(252, 227, 138, .9) 0%, rgba(243, 129, 129, .9) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgba(252, 227, 138, .9) 0%, rgba(243, 129, 129, .9) 100%);
+    -webkit-box-shadow: 10px 10px 0 0 rgba(149,225,211,1);
+    -moz-box-shadow: 10px 10px 0 0 rgba(149,225,211,1);
+    box-shadow: 10px 10px 0 0 rgba(149,225,211,1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition-property:
+            visibility,
+            opacity,
+            transform;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+.team-specialist-wrapper:hover .specialist-photo {
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transform: translate(-10px, -10px);
+}
+
+.team-specialist-wrapper:hover .overlay {
+    -webkit-box-shadow: 10px 10px 0 0 rgba(149,225,211,1);
+    -moz-box-shadow: 10px 10px 0 0 rgba(149,225,211,1);
+    box-shadow: 10px 10px 0 0 rgba(149,225,211,1);
+    transition-property:
+            visibility,
+            opacity,
+            transform;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-10px, -10px);
+}
+
+.social-btn {
+    background-color: #fce38a;
+}
+
+.social-link {
+    display: block;
+    width: 56px;
+    height: 56px;
+    border-right: solid 1px #f9bd87;
+    transition-property:
+            background-color,
+            border-right-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+.social-link:hover {
+    transition-property:
+            background-color,
+            border-right-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    background-color: var(--nav-btn-hoverphoto-color);
+    border-right-color:#b9bcb3;
+
+}
+
+.facebook-link {
+    background: url("../img/icons/social-icons/facebook.png") no-repeat center;
+}
+
+.twitter-link {
+    background: url("../img/icons/social-icons/twitter.png") no-repeat center;
+}
+
+.pinterest-link {
+    background: url("../img/icons/social-icons/pinterest.png") no-repeat center;
+}
+
+.instagram-link {
+    background: url("../img/icons/social-icons/instagram.png") no-repeat center;
+}
+
+.specialist-name {
+    text-align: center;
+    margin: 30px 0 14px;
+}
+
+.specialist-position {
+    font: 300 italic 15px/24px "Roboto", sans-serif;
+    color: var(--sections-text-color);
+    text-align: center;
+}
+
+.specialist-position:first-letter {
+    text-transform: uppercase;
 }
