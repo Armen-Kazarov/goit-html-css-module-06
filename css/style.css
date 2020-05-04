@@ -12,6 +12,10 @@ img {
     height: auto;
 }
 
+button {
+    padding: 0;
+}
+
 :root {
     --nav-main-subtitles-footer-font: 400 14px/1.2 "Montserrat", sans-serif;
     --setion-title-first-row-font: 400 24px/1.2 "Kaushan Script", sans-serif;
@@ -270,29 +274,29 @@ img {
 
 .social-btn {
     background-color: #fce38a;
+    transition-property:
+            background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    margin-right: 1px;
+}
+
+.social-btn:last-child {
+    margin-right: 0;
 }
 
 .social-link {
     display: block;
     width: 56px;
     height: 56px;
-    border-right: solid 1px #f9bd87;
-    transition-property:
-            background-color,
-            border-right-color;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
 }
 
-.social-link:hover {
+.social-btn:hover {
     transition-property:
-            background-color,
-            border-right-color;
+            background-color;
     transition-duration: 0.2s;
     transition-timing-function: linear;
     background-color: var(--nav-btn-hoverphoto-color);
-    border-right-color:#b9bcb3;
-
 }
 
 .facebook-link {
@@ -324,4 +328,49 @@ img {
 
 .specialist-position:first-letter {
     text-transform: uppercase;
+}
+
+.footer {
+    border-top: solid 1px #e5e5e5;
+}
+
+.footer-content {
+    min-height: 62px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content-text-copyright {
+    font: var(--nav-main-subtitles-footer-font);
+}
+
+.footer-copyright-text {
+    color: var(--titles-subtaitles-footercopyright-color);
+}
+
+.footer-copyright-link {
+    color: var(--decorationline-hovernav-color)
+}
+
+.footer-contact-form-input {
+    border: solid 1px #e7e7e7;
+    border-right: none;
+    padding: 10px 14px;
+    width: 228px;
+}
+
+::placeholder {
+    font: 300 italic 15px/24px "Roboto", sans-serif;
+    color: #ccc;
+    text-transform: capitalize;
+}
+
+.footer-contact-form-btn {
+    border: none;
+    background-color: var( --nav-btn-hoverphoto-color);
+    font: 700 14px/1.2 "Montserrat", sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 14px 34px;
+    cursor: pointer;
 }
